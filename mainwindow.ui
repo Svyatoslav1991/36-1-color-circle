@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>448</width>
+    <height>477</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="CircleWidget" name="circle_widget" native="true"/>
+    </item>
+    <item>
+     <widget class="QSlider" name="horizontalSlider">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>448</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="File_menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <widget class="QMenu" name="sound_menu">
+     <property name="title">
+      <string>Звук</string>
+     </property>
+     <addaction name="soundOn_action"/>
+     <addaction name="soundOff_action"/>
+    </widget>
+    <addaction name="sound_menu"/>
+    <addaction name="about_action"/>
+    <addaction name="separator"/>
+    <addaction name="exit_action"/>
+   </widget>
+   <addaction name="File_menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="soundOn_action">
+   <property name="text">
+    <string>Вкл.</string>
+   </property>
+  </action>
+  <action name="soundOff_action">
+   <property name="text">
+    <string>Выкл.</string>
+   </property>
+  </action>
+  <action name="about_action">
+   <property name="text">
+    <string>О программе...</string>
+   </property>
+  </action>
+  <action name="exit_action">
+   <property name="text">
+    <string>Закрыть</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CircleWidget</class>
+   <extends>QWidget</extends>
+   <header>circlewidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

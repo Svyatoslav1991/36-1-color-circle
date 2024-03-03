@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>images/greenCircle.png</file>
+        <file>images/redCircle.png</file>
+        <file>images/yellowCircle.png</file>
+        <file>images/aplIco.png</file>
+        <file>images/cross.ico</file>
+        <file>images/notes.ico</file>
+        <file>images/questionmark.ico</file>
+        <file>images/soundOff.ico</file>
+        <file>images/soundOn.ico</file>
+        <file>images/khogvarts.jpg</file>
+    </qresource>
+    <qresource prefix="/music">
+        <file>music/dendy.mp3</file>
+        <file>music/short.mp3</file>
+    </qresource>
+</RCC>
