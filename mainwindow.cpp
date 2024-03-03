@@ -34,10 +34,14 @@ void MainWindow::settingProgramm()
 
     ui->sound_menu->setIcon(QIcon(":/images/images/notes.ico"));
     ui->soundOn_action->setIcon(QIcon(":/images/images/soundOn.ico"));
-    ui->soundOn_action->setText("Вкл.\t\u2713");
+    ui->soundOn_action->setText("Вкл. \u2713");
+    ui->soundOn_action->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_E));
     ui->soundOff_action->setIcon(QIcon(":/images/images/soundOff.ico"));
+    ui->soundOff_action->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_D));
     ui->about_action->setIcon(QIcon(":/images/images/questionmark.ico"));
+    ui->about_action->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_I));
     ui->exit_action->setIcon(QIcon(":/images/images/cross.ico"));
+    ui->exit_action->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
 
     m_backgroundImage.load(":/images/images/khogvarts.jpg");
     QPalette palette;
@@ -76,7 +80,7 @@ void MainWindow::soundOn_action_clicked()
     if(!m_isSoundOn)
     {
         m_isSoundOn = true;
-        ui->soundOn_action->setText("Вкл.\t\u2713");
+        ui->soundOn_action->setText("Вкл. \u2713");
         ui->soundOff_action->setText("Выкл.");
         m_pBackgroundSound->play();
     }
@@ -91,7 +95,7 @@ void MainWindow::soundOff_action_clicked()
     {
         m_isSoundOn = false;
         ui->soundOn_action->setText("Вкл.");
-        ui->soundOff_action->setText("Выкл.\t\u2713");
+        ui->soundOff_action->setText("Выкл. t\u2713");
         m_pBackgroundSound->pause();
     }
 }
