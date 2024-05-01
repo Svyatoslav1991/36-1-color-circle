@@ -10,6 +10,7 @@
         <file>images/soundOff.ico</file>
         <file>images/soundOn.ico</file>
         <file>images/khogvarts.jpg</file>
+        <file>images/blackCircle.png</file>
     </qresource>
     <qresource prefix="/music">
         <file>music/dendy.mp3</file>

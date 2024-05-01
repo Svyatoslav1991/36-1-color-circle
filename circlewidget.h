@@ -25,6 +25,11 @@ protected:
 private slots:
     void sliderValueChanged(int value);
     virtual void resizeEvent(QResizeEvent *event);
+
+    // QWidget interface
+protected:
+    virtual void mousePressEvent(QMouseEvent *event);
+    virtual void mouseReleaseEvent(QMouseEvent *event);
 };
 
 #endif // CIRCLEWIDGET_H

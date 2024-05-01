@@ -58,4 +58,38 @@ void CircleWidget::sliderValueChanged(int value)
 void CircleWidget::resizeEvent(QResizeEvent *event)
 {
     this->repaint();
+
+    Q_UNUSED(event)
+}
+
+//----------------------------------------------------------------------------------------
+
+void CircleWidget::mousePressEvent(QMouseEvent *event)
+{
+    m_circle.load(":/images/images/blackCircle.png");
+    emit changeImage();
+    this->repaint();
+
+    Q_UNUSED(event);
+}
+
+//----------------------------------------------------------------------------------------
+
+void CircleWidget::mouseReleaseEvent(QMouseEvent *event)
+{
+    if(m_color == Color::green)
+    {
+        m_circle.load(":/images/images/greenCircle.png");
+    }
+    else if(m_color == Color::red)
+    {
+        m_circle.load(":/images/images/redCircle.png");
+    }
+    else
+    {
+        m_circle.load(":/images/images/yellowCircle.png");
+    }
+    this->repaint();
+
+    Q_UNUSED(event);
 }
